@@ -39,7 +39,7 @@ Current relevant configuration:
     ],
 
     "r.sessionWatcher": true,
-    "r.alwaysUseActiveTerminal": false,
+    "r.alwaysUseActiveTerminal": true,
     "r.bracketedPaste": true,
 
     "r.plot.backend": "auto",
