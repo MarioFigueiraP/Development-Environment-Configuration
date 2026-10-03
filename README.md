@@ -596,61 +596,6 @@ This provides a lightweight record of the computational environment without comm
 
 ---
 
-# 15. Files that should be version controlled
-
-A useful repository structure is:
-
-```text
-environment/
-├── README.md
-├── vscode-settings.json
-├── vscode-extensions.txt
-├── r-version.txt
-├── radian-version.txt
-├── python-version.txt
-├── julia-version.txt
-├── latex-version.txt
-├── git-version.txt
-└── macos-version.txt
-```
-
-For R projects using `renv`:
-
-```text
-renv.lock
-```
-
-should also be committed.
-
----
-
-# 16. Important security note
-
-Do **not** commit:
-
-```text
-.env
-.env.*
-*.pem
-*.key
-credentials.json
-secrets.json
-```
-
-or files containing:
-
-- API keys
-- access tokens
-- passwords
-- SSH private keys
-- GitHub tokens
-- cloud credentials
-- personal authentication information
-
-A VS Code `settings.json` is generally safe to document, but inspect it for credentials before committing it to a public repository.
-
----
-
 # 17. Current environment summary
 
 | Component | Configuration |
@@ -669,23 +614,3 @@ A VS Code `settings.json` is generally safe to document, but inspect it for cred
 | Julia symbol cache | Enabled |
 | LaTeX Docker | Disabled |
 | Git autofetch | Enabled |
-
----
-
-## Maintenance
-
-This document should be updated whenever one of the following changes:
-
-- macOS version
-- VS Code version
-- VS Code extensions
-- R version
-- Radian version
-- Python version
-- Julia version
-- LaTeX distribution
-- Git configuration
-- major VS Code settings
-- project-level package environments
-
-The goal is to maintain a reproducible record of the computational environment used for research and software development.
